@@ -51,8 +51,17 @@ on "2004.03.28T15:41-0800" r (P 0 S 0 V 0 Com 0 Tol -1 Env -1 SF 0 Edu -2 Can 0 
 <meta name="referrer" content="origin-when-cross-origin" />
 <link rel="stylesheet" type="text/css" href="main.css">
  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> //-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
+<script>
+	$(document).ready(function(){
+		 $.get("https://github.com/Tetramatrix/awvd/liste.html",function(data) {
+   			 console.log(data)
+    		$("#others").html(data[0].body);
+	});
+	
+</script>
 <div class="left">
 <p>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -79,7 +88,7 @@ on "2004.03.28T15:41-0800" r (P 0 S 0 V 0 Com 0 Tol -1 Env -1 SF 0 Edu -2 Can 0 
 <p>Sourcecode:
 <ul><li><a href="https://github.com/Tetramatrix/fastpm">Sourcecode</a></li></ul>
 </p>
-<iframe frameBorder="0" width="800" height="600" src="https://github.com/Tetramatrix/awvd/liste.html">
+<p id="others"></p>
 </div><!-- google_ad_section_end -->
 <div class="right">
 <p>
